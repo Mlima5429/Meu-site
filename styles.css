@@ -1,0 +1,273 @@
+body {
+    font-family: 'Arial', serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #18027a;  
+    background-image: url('../../Downloads/Logo L&B.png');
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-attachment: fixed; /* Faz a imagem de fundo fixar-se ao fundo da tela */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.fa-check {
+    text-align:initial;
+    font-family: system-ui;
+    color: #ffffff;
+    left: auto;
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    background: url('../../Downloads/Logo L&B.png') no-repeat center center;
+    background-size: 70%;
+    background-position: center center;
+    background-attachment: scroll;
+    color: #fff;
+    padding: 10px 50px;
+    height: 250px;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    color: rgb(192, 135, 50);
+    visibility: hidden; /* Oculta o texto do título */
+}
+
+nav {
+    position: absolute; /* Posiciona a navegação dentro do header */
+    right: 20px; /* Ajusta a distância da borda direita do header */
+    top: 20px; /* Ajusta a distância da borda superior do header */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+nav ul li { 
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero {
+    background: #8f8f8f; /*barra abaixo da logo*/
+    padding: 5px 0;
+    text-align: center;
+    width: 2000px;
+    height: 30px;
+}
+.escrita-db {
+    border-bottom-style: inset;
+    text-align: center;
+    color: #ffffff;
+}
+#hero h2 {
+    margin: 0;
+    font-size: 2em;
+    color:rgb(0, 0, 0); /*escrita maior da logo*/
+}
+
+#hero p {
+    margin: 20px 0;
+    color: rgb(255, 255, 255);/*Escrita menor na logo*/
+    font-size: 1.2em;
+}
+p {
+
+    text-align: center;
+}
+
+.btn {
+    background: #4CAF50; 
+    color: #fff;
+    padding: 10px 20px;
+    background-size: cover;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Animação para aparecer com desvanecimento e movimento */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Ajuste para o efeito desejado */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-button {
+    opacity: 0;
+    transform: translateY(20px); /* Ajuste inicial para o efeito */
+    animation: fadeInUp 1s ease-out forwards; /* Aplica a animação */
+}
+
+/* Opcional: Adicione uma transição para suavizar a interação com o hover */
+.btn {
+    transition: background 0.10s ease, color 0.10s ease;
+}
+
+.btn:hover {
+    background: #45a049; /* Cor de fundo ao passar o mouse */
+    color: #fff;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Define a classe que será adicionada quando o elemento estiver visível */
+.animated-title {
+    opacity: 0; /* Garante que os elementos começam invisíveis */
+    transform: translateY(20px); /* Define a posição inicial fora da tela */
+    animation: fadeInUp 1s ease-out forwards; /* Aplica a animação */
+}
+
+/* Animação específica para cada item, se desejar diferentes tempos de animação */
+.info:nth-child(1) .animated-title {
+    animation-delay: 0.7s; /* Delay para o primeiro item */
+}
+
+.info:nth-child(2) .animated-title {
+    animation-delay: 0.7s; /* Delay para o segundo item */
+}
+
+.info:nth-child(3) .animated-title {
+    animation-delay: 0.7s; /* Delay para o terceiro item */
+}
+
+.info:nth-child(4) .animated-title {
+    animation-delay: 0.8s; /* Delay para o quarto item */
+}
+
+.whatsapp-btn {
+    background: #25D366; 
+}
+
+#servicos {
+    padding: 50px 0;
+    background: #f5f5f5; 
+}
+
+#servicos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(192, 135, 50);
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.info {
+
+    overflow: visible;
+    flex: 1;
+    padding: 50px;
+    background: hsl(0, 0%, 12%);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info-img {
+    width: 65%; /* Ajusta a largura da imagem para preencher o contêiner */
+    height: 300px; /* Define uma altura fixa para todas as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
+    border-radius: 5px;
+    display: block;
+    margin: auto; /* Centraliza a imagem horizontalmente */
+    margin-bottom: 20px;
+}
+
+.info .btn {
+    display: inline-block;
+    margin-top: 20px ;
+}
+
+.divider {
+    width: 1px;
+    background: hwb(0 100% 0%); 
+    height: 100%;
+}
+
+#contato {
+    padding: 50px 0;
+    text-align: center;
+    color: rgb(192, 135, 50);
+}
+
+#contato form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contato input, #contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contato button {
+    background: #ffffff; /* Cor madeira para o botão de envio */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #ffffff; /* Cor madeira */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+#sobre {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.final{
+
+    color: black;
+}

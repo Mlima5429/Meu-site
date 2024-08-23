@@ -1,0 +1,21 @@
+<!-- Adicione este script ao final do seu HTML ou em um arquivo JS separado -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const animatedElements = document.querySelectorAll('.animated-title');
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Adiciona a classe de animação quando o elemento entra em vista
+                    entry.target.classList.add('animated-title');
+                    // Para não repetir a animação, desobserve o elemento após a animação
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 }); // Define a porcentagem de visibilidade para ativar a animação
+    
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+    </script>
